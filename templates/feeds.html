@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}<title>feeds</title>{% endblock %}
+
+{% block extraStyle %}
+<link rel="stylesheet" href="{% static 'feeds.css' %}">
+{% endblock %}
+<!-- {% block contentTitle %}
+FEEDS 
+{% endblock %} -->
+{% block main %}
+
+{% for post in posts %}
+
+{% include "post.html" with textmessage=post.textContent username=post.postedBy propicsrc=post.imageContent imagesrc=post.imageContent only%}
+
+{% endfor %}
+
+{% endblock %}

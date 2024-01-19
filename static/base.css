@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Teko', sans-serif;  
+}
+
+:root {
+    font-size: 16px;
+
+    --major-blue-color: #0d19c3;
+    --minor-blue-color: #3846ff;
+    --major-yellow: #EAB505;
+    --white: white;
+    --whitesmoke: whitesmoke;
+
+    --cursive:'Cookie', cursive;
+}
+
+body {
+    position: relative;
+    z-index: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    width: 100%;
+    height: 15%;
+    /* background-color: var(--major-blue-color); */
+}
+
+header img {
+    width: 70%;
+    height: 80%;
+}
+
+#container, #title{
+    height: 100%;
+    display: flex;
+}
+
+#container {
+    background: linear-gradient(FF9933, FFFFFF, 138808);
+}
+
+#logo {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1/1;
+}
+
+#title {
+    flex-direction: column;
+}
+
+#clubname {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    color: var(--major-yellow);
+    font-family: var(--cursive);
+}
+
+#fanspage {
+    color: var(--white);
+    font-size: 1.5rem;
+}
+
+#design {
+    flex-grow: 1;
+    /* background: linear-gradient(90deg, transparent, var(--major-yellow)); */
+}
+
+nav {
+    border-top: 2px solid var(--whitesmoke);
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 10%;
+}
+
+.sidebar-container {
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+    background-color: rgb(128, 128, 128, .75);
+    box-shadow: 15px 8px 55px -1px rgba(0,0,0,0.75) inset;
+    /* -webkit-box-shadow: 2px 2px 33px -5px rgba(0,0,0,0.75) inset; */
+    /* -moz-box-shadow: 2px 2px 33px -5px rgba(0,0,0,0.75) inset; */
+    width: 100vw;
+    height: 90vh;
+}
+
+
+.sidebar{
+    background-color: var(--white);
+    position: fixed;
+    right: 0px;
+    top: 0%;
+    width: 40%;
+    height: 90%;
+}
+
+.propic-cont {
+    display: flex;
+    width: 100%;
+    height: 30%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.profile-picture {
+    /* border: 2px double black; */
+    width: 60%;
+    aspect-ratio: 1/1;
+    /* border-radius: 50%; */
+}
+
+.profile-picture img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.bar_element{
+    font-size: 1.5rem;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10%;
+} 
+
+
+
+.content-title {
+    display: flex;
+    align-items: center;
+    /* background-color: ; */
+    background: linear-gradient(270deg, transparent, var(--major-yellow));
+    height: 5%;
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding-left: 10px;
+    color: var(--major-blue-color);
+}
+
+main {
+    height: 80%;
+    /* background: linear-gradient(180deg, var(--minor-blue-color), var(--major-yellow)); */
+    background-color: var(--whitesmoke);
+    overflow: auto;
+}

@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    {% block head %}
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        {% block title %}<title>cfc fans page</title>{% endblock %}
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Roboto:wght@400;700&family=Teko:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href='{% static "base.css" %}'>
+        {% block extraStyle %}{% endblock %}
+        {% block extraLink %}{% endblock %}
+        <script 
+        src="https://kit.fontawesome.com/81346837db.js" crossorigin="anonymous">
+        </script>
+    </head>
+    {% endblock %}
+    <body>
+        {% block header %}
+        <header>
+            <div id="container">
+                <div id="logo"><img src="https://ww1.freelogovectors.net/wp-content/uploads/2021/03/chennaiyin-fc-logo-freelogovectors.net_.png?lossy=1&w=2560&ssl=1" alt="chennaiyin-fc-logo" title="cfc logo"></div>
+                <div id="title">
+                    <div id="clubname">chennaiyin f.c</div>
+                    <div id="fanspage">FANS PAGE</div>
+                </div>
+                <div id="design">
+                </div>
+            </div>
+
+        </header>
+        {% endblock %}
+        <!-- <div class="content-title">
+            {% block contentTitle %}
+            {% endblock %}                
+        </div> -->
+        <main>
+        {% block main %}
+
+        {% endblock %}
+        </main>
+        {% block navbar %}
+        <nav>
+            <i class="fa-solid fa-t fa-xl"></i>
+            <i class="fa-solid fa-globe fa-xl"></i>
+            <i class="fa-solid fa-house fa-xl"></i>
+            <i class="fa-solid fa-user-group fa-xl"></i>
+            <i class="fa-solid fa-bars fa-xl menu"></i>
+        </nav>   
+        
+        <div class="sidebar-container">
+            <div class="sidebar">
+                <div class="propic-cont">
+                    <div class="profile-picture">
+                        <img src="https://th.bing.com/th/id/OIP.rVD2qTRfrklyUaCIX2emWQHaIB?pid=ImgDet&w=179&h=193&c=7&dpr=2" alt="">
+                    </div>
+                </div>
+                <p class="bar_element">settings</p>
+                <p class="bar_element">about</p>
+                <p class="bar_element">logout</p>
+                <p class="bar_element">sign up</p>
+            </div>
+        </div>
+        {% endblock %}
+       
+
+        <script src="{% static 'base.js' %}" type="text/javascript" async defer></script>
+    </body>
+</html>

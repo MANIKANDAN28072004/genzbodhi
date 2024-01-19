@@ -1,0 +1,21 @@
+<div class="posts">
+    <div class="profile">
+        <div class="profile-pic">
+            <img src={{propicsrc}} alt="" class="profileimg" style="display: inline;">
+        </div>
+        <div class="user-details">
+            <p class="username" style="display: inline;">{{username}}</p>
+        </div>
+    </div>
+    <div class="text-message">{{ textmessage }}</div>
+    {% if imagesrc %}
+    <div class="img-section">
+        <img src={{imagesrc}} alt="" class="postimage">
+    </div>
+    {% endif %}
+    <div class="buttons-section">
+        <i class="fa-solid fa-share fa-xl"></i>
+        <i class="fa-regular fa-comment fa-xl"></i>
+        <i class="fa-regular fa-thumbs-up fa-xl"></i>
+    </div>
+</div>
