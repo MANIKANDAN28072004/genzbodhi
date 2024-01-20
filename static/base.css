@@ -1,10 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;500;700&family=Poppins:wght@100;200;700&family=Roboto:wght@900&family=Rubik+Broken+Fax&family=Rubik+Doodle+Shadow&family=Rubik+Glitch&family=Rubik+Maps&family=Rubik+Scribble&family=Sevillana&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Outfit', sans-serif;
-  font-family: 'Roboto', sans-serif;
-  font-family: 'Teko', sans-serif;  
 }
 
 :root {
@@ -16,7 +15,8 @@
     --white: white;
     --whitesmoke: whitesmoke;
 
-    --cursive:'Cookie', cursive;
+    --header-font: 'Poppins', sans-serif;
+
 }
 
 body {
@@ -45,7 +45,7 @@ header img {
 }
 
 #container {
-    background: linear-gradient(FF9933, FFFFFF, 138808);
+    background: linear-gradient(rgb(250, 29, 29),var(--white), var(--major-blue-color));
 }
 
 #logo {
@@ -55,19 +55,23 @@ header img {
     justify-content: center;
     align-items: center;
     aspect-ratio: 1/1;
+    background-image: url(./images/logo.png);
+    background-size: cover;
 }
 
 #title {
     flex-direction: column;
+    margin-left: 3%;
 }
 
 #clubname {
-    flex-basis: 50%;
+    flex-basis: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: end;
-    color: var(--major-yellow);
-    font-family: var(--cursive);
+    justify-content: center;
+    color: var(--major-blue-color);
+    font-weight: 800;
+    font-family: var(--header-font);
 }
 
 #fanspage {
