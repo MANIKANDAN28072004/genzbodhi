@@ -1,0 +1,99 @@
+{% extends 'base.html' %} 
+
+{% block extraStyle %} 
+    <style>
+        .blogOuterContainer{
+            margin: 10px;
+            background-color: whitesmoke;
+        }
+        .card{
+            display: grid;
+            grid-template-rows:12rem 3rem 2.5rem;
+            margin-bottom: 1rem;
+            background-color: white;
+            border-radius: 4px;
+            height: fit-content;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        }
+        .imageContainer{
+            height: 100%;
+            width: 100%;
+        }
+        .imageContainer img{
+            border-top-right-radius: 4px;
+            border-top-left-radius: 4px;
+            height: 100%;
+            width: 100%;
+        }
+        .headingContainer{
+            font-size: 1rem;
+            font-weight: bolder;
+            margin: 5px 10px;
+        }
+
+        .footerContainer{
+            display: flex;
+            justify-content: space-between;
+            margin: 10px;
+        }
+        .nameTimeContainer{
+            display: flex;
+            justify-content: space-around;
+            width: 100px;
+        }
+        .nameTimeContainer span{
+            margin: 0 2px;
+        }
+        .socialMediaContainer{
+            display: flex;
+            justify-content: space-around;
+            width: 100px;
+        }
+    </style>
+{% endblock %}
+
+{% block main %} 
+
+    <div class="blogOuterContainer">
+        <div class="card">
+            <div class="imageContainer">
+                <img src="/post/WIN_20220506_22_06_46_Pro.jpg" alt="">
+            </div>
+            <div class="headingContainer">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda qui, architecto, ....</p>
+            </div>
+            <div class="footerContainer">
+                <div class="nameTimeContainer">
+                    <p><span>Karan raj</span> <span>&middot;</span><span>2d ago</span></p>
+                </div>
+                <div class="socialMediaContainer">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-comment"></i>
+                    <i class="fa-solid fa-share-nodes"></i>
+                    
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card" onclick="window.location.href='/blogs/asdf'">
+            <div class="imageContainer">
+                <img src="/post/WIN_20220506_22_06_46_Pro.jpg" alt="">
+            </div>
+            <div class="headingContainer">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda qui, architecto, molestiae quia doloremque ani....</p>
+            </div>
+            <div class="footerContainer">
+                <div class="nameTimeContainer">
+                    <p><span>Karan raj</span> <span>&middot;</span><span>2d ago</span></p>
+                </div>
+                <div class="socialMediaContainer">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-share-nodes"></i>
+                    <i class="fa-solid fa-comment"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

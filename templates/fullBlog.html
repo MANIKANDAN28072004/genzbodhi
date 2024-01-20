@@ -1,0 +1,94 @@
+{% extends 'base.html' %} 
+
+{% block extraStyle %} 
+    <style>
+    
+        .fullBlogContainer{
+            margin: 10px;
+        }
+        .backContainer{
+            margin: 10px;
+            display: flex;
+            gap: 0.2rem;
+            align-items: center;
+        }
+        .headNameContainer > p{
+            font-weight: bolder;
+            font-size: 20px;
+            text-align: center;
+        }
+        .nameShareContainer{
+            display: flex;
+            justify-content: space-between;
+            margin: 10px;
+        }
+        .nameShareContainer > p{
+            margin: 5px;
+            display: flex;
+            flex-direction: column;
+            line-height: 0.8rem;
+        }
+        .socialMediaContainer{
+            display: flex;
+            justify-content: space-around;
+            width: 100px;
+            align-items: center;
+        }
+        .imageContainer{
+            height: 100%;
+            width: 100%;
+        }
+        .imageContainer img{
+            border-radius: 4px;
+            height: 100%;
+            width: 100%;
+        }
+        .contentContainer{
+            margin: 10px;
+            line-height: 1rem;
+            text-indent: 0.5rem;
+        }
+        .contentContainer p{
+            margin: 10px 0;
+        }
+        .backUpvoteContainer{
+            display: flex;
+            margin: 20px;
+            justify-content: space-between;
+        }
+
+    </style>
+{% endblock %}
+
+{% block main %} 
+    <div class="fullBlogContainer">
+        <div class="backContainer">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Back</span>
+        </div>
+        <div class="headNameContainer">
+            <p>Lorem ipsum asdfa sdfsfsf asdfsf</p>
+            <div class="nameShareContainer">
+                <p><span style="font-size: 16px; padding: 0;">Karan raj</span><span style="font-size: 14px; padding: 0;">2d ago</span></p>
+                <div class="socialMediaContainer">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-comment"></i>
+                    <i class="fa-solid fa-share-nodes"></i>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="imageContainer">
+            <img src="/post/WIN_20220506_22_06_46_Pro.jpg" alt="">
+        </div>
+        <div class="contentContainer">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod pariatur repudiandae et labore id voluptates, accusantium asperiores unde magni aut. Architecto velit incidunt laboriosam debitis, id at quas dolorem consequuntur.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut debitis, neque sit corrupti fugiat natus eum perferendis fuga veritatis itaque cumque quasi quam, sint, id voluptates ipsa odio velit aspernatur?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, dolorum quia. Nulla vero mollitia nisi, ex et amet fugit, culpa, cumque labore hic eius cum incidunt repudiandae vel porro velit?</p>
+        </div>
+        <!-- <div class="backUpvoteContainer">
+            <i class="fa-solid fa-circle-chevron-left"></i>
+            <i class="fa-solid fa-circle-chevron-right"></i>
+        </div> -->
+    </div>
+{% endblock %}

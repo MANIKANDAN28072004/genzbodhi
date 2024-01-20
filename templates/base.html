@@ -12,6 +12,14 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Roboto:wght@400;700&family=Teko:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href='{% static "base.css" %}'>
+        <style>
+            .active-url{
+                color: black !important;
+            }
+            .non-active-url{
+                color: grey !important;
+            }
+        </style>
         {% block extraStyle %}{% endblock %}
         {% block extraLink %}{% endblock %}
         <script 
@@ -46,10 +54,15 @@
         {% block navbar %}
         <nav>
             <i class="fa-solid fa-t fa-xl"></i>
-            <i class="fa-solid fa-globe fa-xl"></i>
-            <i class="fa-solid fa-house fa-xl"></i>
+            <!-- <i class="fa-solid fa-globe fa-xl"></i> -->
+            <a href="{% url 'blogs:blogUrl' %}" style="text-decoration: none;"><i class="fa-brands fa-blogger fa-2xl"></i></a>
+            <a href="{% url 'feeds:home' %}" style="text-decoration: none;"><i class="fa-solid fa-house fa-xl" ></i></a>
             <i class="fa-solid fa-user-group fa-xl"></i>
             <i class="fa-solid fa-bars fa-xl menu"></i>
+
+            <!-- Assuming a variable named 'current_page' is available in your context -->
+
+
         </nav>   
         
         <div class="sidebar-container">
