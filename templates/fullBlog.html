@@ -91,4 +91,20 @@
             <i class="fa-solid fa-circle-chevron-right"></i>
         </div> -->
     </div>
+    <script type="text/javascript">
+        (function (d, t) {
+            var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+            v.onload = function () {
+                window.voiceflow.chat.load({
+                    verify: { projectID: '65ab3498a561e33f91ca3320' },
+                    url: 'https://general-runtime.voiceflow.com',
+                    versionID: 'production'
+                });
+            }
+            v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript";
+            console.log(v, d, t, s, s.parentNode)
+             s.parentNode.insertBefore(v, s);
+        })(document, 'script');
+    </script> 
+
 {% endblock %}

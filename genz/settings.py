@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'feeds',
     'blogs',
     'profiles',
+    'events',
 ]
 
 MIDDLEWARE = [

@@ -1,4 +1,4 @@
-<div class="posts">
+<!-- <div class="posts">
     <div class="profile">
         <div class="profile-pic">
             <img src={{propicsrc}} alt="" class="profileimg" style="display: inline;">
@@ -19,7 +19,7 @@
         <i class="fa-regular fa-comment fa-xl"></i>
         <i class="fa-regular fa-thumbs-up fa-xl"></i>
     </div>
-</div>
+</div> -->
 
 
 
@@ -32,19 +32,20 @@
                     <div class="card-heade">
                         <div class="d-flex">
                             <div class="p-2">
-                                <img class="rounded-circle" width="45" src="https://picsum.photos/50/50" alt="">
+                                <img class="rounded-circle" style="border-radius: 50%; width: 2rem; height: 2rem;" src="{{propicsrc}}" alt="">
                             </div>
                             <div class="p-2">
-                                <div class="h5 m-0">@LeeCross</div>
-                                <div class="h7 text-muted">Miracles Lee Cross</div>
+                                <div class="h5 m-0">{{username}}</div>
                             </div>
                         </div>
                     </div>
-                    <img src="assets/event img/umkgagjyt5831.jpg" style="border-radius: 0;" class="card-img-top">
+                    {% if imagesrc %}
+                    <img src="{{imagesrc}}" style="border-radius: 0;" class="card-img-top">
+                    {% endif %}
                     <div class="card-body">
                         <div class="text-muted h7 mb-1"> <small><i class="fa fa-clock-o"></i> Posted 40 min
                                 ago...</small></div>
-                        <h5 class="card-title">I'm selling drugs for cheap price</h5>
+                        <h5 class="card-title">{{ textmessage }}</h5>
                     </div>
                     <div class="card-footer">
                         <button class="btn btn-outline-danger"><i class="fa fa-heart"></i> Like</button>
@@ -58,7 +59,3 @@
 
         </div>
     </div>
-
-</body>
-
-</html>

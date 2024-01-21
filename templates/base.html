@@ -13,11 +13,12 @@
         <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Roboto:wght@400;700&family=Teko:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href='{% static "base.css" %}'>
         <style>
-            .active-url{
-                color: black !important;
-            }
-            .non-active-url{
-                color: grey !important;
+
+            #chatbot{
+                position: fixed;
+                bottom: 20px;
+                right: 100px;
+                cursor: pointer;
             }
         </style>
         {% block extraStyle %}{% endblock %}
@@ -56,7 +57,7 @@
             <!-- <i class="fa-solid fa-globe fa-xl"></i> -->
             <a href="{% url 'blogs:blogUrl' %}" style="text-decoration: none;"><i class="fa-brands fa-blogger fa-2xl"></i></a>
             <a href="{% url 'feeds:home' %}" style="text-decoration: none;"><i class="fa-solid fa-house fa-xl" ></i></a>
-            <i class="fa-solid fa-user-group fa-xl"></i>
+            <i class="fa-solid fa-user-group fa-xl" id="chatbot"></i>
             <i class="fa-solid fa-bars fa-xl menu"></i>
 
             <!-- Assuming a variable named 'current_page' is available in your context -->
@@ -103,6 +104,27 @@
 
         <script src="{% static 'base.js' %}" type="text/javascript" async defer></script>
         {% block extraScript %} 
+        <script type="text/javascript">
+        (function (d, t) {
+            var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+            v.onload = function () {
+                window.voiceflow.chat.load({
+                    verify: { projectID: '65ab3498a561e33f91ca3320' },
+                    url: 'https://general-runtime.voiceflow.com',
+                    versionID: 'production'
+                });
+            }
+            v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; 
+            v.id = 'chatbot';
+            var chatbot = document.getElementById("chatbot");
+            chatbot.parentNode.replaceChild(v, chatbot);
+        })(document, 'script');
+    //     document.getElementById('chatbot').addEventListener('click', function () {
+    //     window.voiceflow.chat.toggle(); // You may need to adjust this function based on the chatbot library you are using
+    // });
+    </script>
+
+
         {% endblock %}
     </body>
 </html>
