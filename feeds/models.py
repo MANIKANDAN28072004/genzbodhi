@@ -8,3 +8,6 @@ class post(models.Model):
     imageContent = models.ImageField(upload_to='post', null=True)
     postedBy = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     postedOn = models.DateTimeField(default=datetime.now(), blank=True)
+
+    class Meta:
+        ordering = ['-postedOn']
