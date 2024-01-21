@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extraStyle %}
+    <link rel="stylesheet" href="{% static 'register.css' %}">
+{% endblock %}
+
+{% block main %}
+    <div class="container">
+        {% for message in messages %}
+            <p>{{message}}</p>
+        {% endfor %}
+        <form action="register" method="post">
+            {% csrf_token %}
+            <div class="username field">
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username" placeholder="Adam">
+            </div>
+            <div class="email field">
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" id="email" placeholder="Adam@email.com">
+            </div>
+            <div class="password field">
+                <label for="Password1">Password:</label>
+                <input type="password" name="password" id="password1" placeholder="*******">
+            </div>
+            <div class="password field">
+                <label for="Password2">Repeat Password:</label>
+                <input type="password" name="password2" id="password2" placeholder="*******">
+            </div>
+            <div class="submit">
+                <input type="submit" value="Sign up">
+            </div>
+        </form>
+    </div>
+{% endblock %}

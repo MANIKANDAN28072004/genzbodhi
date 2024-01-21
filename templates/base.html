@@ -68,13 +68,34 @@
             <div class="sidebar">
                 <div class="propic-cont">
                     <div class="profile-picture">
-                        <img src="https://th.bing.com/th/id/OIP.rVD2qTRfrklyUaCIX2emWQHaIB?pid=ImgDet&w=179&h=193&c=7&dpr=2" alt="">
+                        {% if user.is_authenticated %}
+                            <img src="{{profile.profileImage}}" alt="">
+                        {% else %}
+                            <img src="profile/default.jpeg" alt="">
+                        {% endif %}
+                    </div>
+                    <div class="profilename">
+                        {% if user.is_authenticated %}
+                            <p>{{user.username}}</p>
+                        {% endif %}
                     </div>
                 </div>
-                <p class="bar_element">settings</p>
-                <p class="bar_element">about</p>
-                <p class="bar_element">logout</p>
-                <p class="bar_element">sign up</p>
+
+                {% if user.is_authenticated %}
+                    <a href="{% url 'profiles:logout' %}">
+                        <p class="bar_element">logout</p>
+                    </a>
+                {% else %}
+                    <a href="{% url 'profiles:register' %}">
+                        <p class="bar_element">sign up</p>
+                    </a>
+                    <a href="{% url 'profiles:login' %}">
+                        <p class="bar_element">log in</p>
+                    </a>
+                {% endif %}
+
+            
+                
             </div>
         </div>
         {% endblock %}

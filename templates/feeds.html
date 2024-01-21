@@ -24,9 +24,8 @@
 
 {% endfor %}
 
-
-<div class="addpost">
-    <i class="fa-solid fa-plus fa-2xl"></i>
-</div>
+<a href="{% url 'feeds:postform' %}">
+    {% include "addcontent.html" %}
+</a>
 
 {% endblock %}

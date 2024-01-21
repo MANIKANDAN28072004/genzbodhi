@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;700&family=Roboto:wght@900&family=Rubik+Broken+Fax&family=Rubik+Doodle+Shadow&family=Rubik+Glitch&family=Rubik+Maps&family=Rubik+Scribble&family=Sevillana&display=swap');
+
+label, input {
+    display: block;
+}
+
+input {
+    font-size: 1.1rem;
+    width: 80%;
+    border-radius: .3rem;
+    border: none;
+    outline: none;
+    padding: 1% 0 1% 2%;
+}
+
+.container {
+    background: linear-gradient(rgb(250, 29, 29), var(--major-blue-color));
+    width: 80%;
+    height: 85%;
+    color: white;
+    margin: 10% 10% 5% 10%;
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+form {
+    height: 100%;
+    width: 100%;
+}
+
+.field {
+    margin: 0 0 5% 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.submit {
+    height: 20%;
+    display: flex;
+    align-items: center;
+}
+
+.submit input {
+    height: 60%;
+    width: 30%;
+    text-align: center;
+    padding: 0;
+}
+
+.submit input:hover {
+    transform: scale(1.1) translate(6%);
+    background-color: rgb(39, 38, 38);
+    color: white;
+    cursor: pointer;
+}

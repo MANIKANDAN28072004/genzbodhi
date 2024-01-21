@@ -5,6 +5,6 @@ app_name = 'feeds'
 
 urlpatterns = [
     path('', views.home, name='home'),
-    
+    path('postform', views.postform, name="postform")
 ]
 

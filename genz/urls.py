@@ -25,6 +25,7 @@ urlpatterns = [
     path('', include('feeds.urls')),
     path('blogs/', include('blogs.urls')),
     path('events/', include('events.urls')),
+    path('profile/', include('profiles.urls')),
 ]
 
 if settings.DEBUG:

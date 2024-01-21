@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extraStyle %}
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+{% endblock %}
+
+{% block main %}
+    <div class="container">
+        {% for message in messages %}
+            <p>{{message}}</p>
+        {% endfor %}
+        <form action="{% url 'profiles:login' %}" method="post">
+            {% csrf_token %}
+            <div class="email field">
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username" placeholder="Adam">
+            </div>
+            <div class="password field">
+                <label for="Password">Password:</label>
+                <input type="password" name="password" id="password1" placeholder="*******">
+            </div>
+            <div class="submit">
+                <input type="submit" value="Login">
+            </div>
+        </form>
+    </div>
+{% endblock %}
