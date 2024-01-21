@@ -52,7 +52,7 @@
         </main>
         {% block navbar %}
         <nav>
-            <i class="fa-solid fa-t fa-xl"></i>
+            <a href="{% url 'events:eventUrl' %}" style="text-decoration: none;"><i class="fa-solid fa-bullhorn fa-xl"></i></a>
             <!-- <i class="fa-solid fa-globe fa-xl"></i> -->
             <a href="{% url 'blogs:blogUrl' %}" style="text-decoration: none;"><i class="fa-brands fa-blogger fa-2xl"></i></a>
             <a href="{% url 'feeds:home' %}" style="text-decoration: none;"><i class="fa-solid fa-house fa-xl" ></i></a>
@@ -81,5 +81,7 @@
        
 
         <script src="{% static 'base.js' %}" type="text/javascript" async defer></script>
+        {% block extraScript %} 
+        {% endblock %}
     </body>
 </html>

@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block extraLink %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+{% endblock %}
+{% block main %}
+    <div class="main-box d-flex flex-column align-content-center">
+        
+        <div class="card text-center m-3">
+            <h5 class="card-header fw-bolder">
+                Featured
+            </h5>
+            <img src="/post/WIN_20220506_22_06_46_Pro.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Let's Go</a>
+            </div>
+            <div class="card-footer text-muted">
+                2 days ago
+            </div>
+        </div>
+        <div class="btn-group btn-group-lg m-3" role="group" aria-label="...">
+            <button type="button" class="btn btn-outline-secondary active" id="events">Events</button>
+            <button type="button" class="btn btn-outline-secondary" id="podcasts">Podcasts</button>
+        </div>
+        <div class="card" style="width: 22rem; margin: .3rem auto;">
+            <img src="/post/WIN_20220506_22_06_46_Pro.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Killing drug addicts</h5>
+                <p class="card-text">Kill some of the notorious durg dealers, cartels and victims of dtug addicts for a quick buck</p>
+                <div class="d-flex justify-content-between">
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <div href="#" class="btn btn-primary">Register</div>
+                </div>
+            </div>
+        </div>
+        <div class="card" style="width: 22rem; margin: .3rem auto;">
+            <img src="/post/WIN_20220506_22_06_46_Pro.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Killing drug addicts</h5>
+                <p class="card-text">Kill some of the notorious durg dealers, cartels and victims of dtug addicts for a quick
+                    buck</p>
+                <div class="d-flex justify-content-between">
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <div href="#" class="btn btn-primary">Register</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+{% endblock %}
+
+{% block extraScript %} 
+    <script>
+        let events = document.getElementById("events");
+        let podcasts = document.getElementById("podcasts");
+
+        events.addEventListener("click", ()=>{
+            if (podcasts.classList.contains("active")){
+                podcasts.classList.remove("active")
+            }
+           
+            events.classList.add("active")
+        })
+
+        
+        podcasts.addEventListener("click", ()=>{
+            if (events.classList.contains("active")){
+                events.classList.remove("active")
+            }
+           
+            podcasts.classList.add("active")
+        })
+
+    </script>
+{% endblock %}
