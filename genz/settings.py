@@ -110,8 +110,8 @@ else:
     # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
     DATABASES = {
-        'default': dj_database_url.parse(DATABASE_URL)
-        }
+        'default': dj_database_url.config('postgres://genzbodhi_user:9BehPK45QQvKdlyIsqwqnkRJiMZ462qW@dpg-cmmi74gl5elc73cc9ap0-a/genzbodhi',        
+                                        conn_max_age=600    )}
 
 
 # Password validation
