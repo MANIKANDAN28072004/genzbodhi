@@ -70,7 +70,7 @@
                 <div class="propic-cont">
                     <div class="profile-picture">
                         {% if user.is_authenticated %}
-                            <img src="{{profile.profileImage}}" alt="">
+                            <img src="/{{profile.profileImage}}" alt="">
                         {% else %}
                             <img src="profile/default.jpeg" alt="">
                         {% endif %}
