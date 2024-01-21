@@ -19,9 +19,11 @@
 {% block main %}
 
 {% for post in posts %}
-
-{% include "post.html" with textmessage=post.textContent username=post.postedBy propicsrc=post.imageContent imagesrc=post.imageContent only%}
-
+    {% for profile in profiles %}
+        {% if profile.user == post.postedBy %}
+        {% include "post.html" with textmessage=post.textContent username=post.postedBy propicsrc=profile.profileImage imagesrc=post.imageContent only%}
+        {% endif %}
+    {% endfor %}
 {% endfor %}
 
 <a href="{% url 'feeds:postform' %}">

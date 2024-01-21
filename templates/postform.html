@@ -39,21 +39,21 @@
 {% endblock %}
 
 {% block main %}
-{% if user.is_authenticated %}
-    <div class="container">
+<div class="container">
+        {% if user.is_authenticated %}
         {% for message in messages %}
             <p>{{message}}</p>
         {% endfor %}
-        <form action="" method="post">
+        <form action="{% url 'feeds:postform' %}" method="post" enctype="multipart/form-data">
             {% csrf_token %}
             {{form.as_div}}
             <div class="field">
                 <input type="submit" value="Post">
             </div>
         </form>
+        {% else %}
+            <h3>Login to Post your thoughts..</h3><br>
+            <a href="{% url 'profiles:login' %}">login</a>
+        {% endif %}
     </div>
-{% else %}
-    <h3>Login to Post your thoughts..</h3><br>
-    <a href="{% url 'profiles:login' %}">login</a>
-{% endif %}
 {% endblock %}
