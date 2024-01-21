@@ -56,7 +56,7 @@
 {% block main %} 
 
     <div class="blogOuterContainer">
-        <div class="card">
+    <!--    <div class="card">
             <div class="imageContainer">
                 <img src="/post/WIN_20220506_22_06_46_Pro.jpg" alt="">
             </div>
@@ -74,10 +74,32 @@
                     
                 </div>
             </div>
+        </div> -->
+
+        {% for blog in blogs %} 
+        <div class="card"  onclick="window.location.href='/blogs/{{blog.blogSlug}}'">
+            <div class="imageContainer">
+                <img src="{{blog.imageContent.url}}" alt="">
+            </div>
+            <div class="headingContainer">
+                <p>{{blog.heading | truncatewords:8}}</p>
+            </div>
+            <div class="footerContainer">
+                <div class="nameTimeContainer">
+                    <p><span>{{blog.postedBy.username}}</span> <span>&middot;</span><span>{{blog.postedOn}}</span></p>
+                </div>
+                <div class="socialMediaContainer">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-comment"></i>
+                    <i class="fa-solid fa-share-nodes"></i>
+                    
+                </div>
+            </div>
         </div>
+        {% endfor %}
 
 
-        <div class="card" onclick="window.location.href='/blogs/asdf'">
+        <!-- <div class="card" onclick="window.location.href='/blogs/asdf'">
             <div class="imageContainer">
                 <img src="/post/WIN_20220506_22_06_46_Pro.jpg" alt="">
             </div>
@@ -95,7 +117,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <a href="{% url 'blogs:postform' %}">
         {% include "addcontent.html" %}

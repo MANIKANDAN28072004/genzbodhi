@@ -44,7 +44,14 @@
         {% for message in messages %}
             <p>{{message}}</p>
         {% endfor %}
+        {{request.path}}
+        {% if request.path == '/postform' %}
         <form action="{% url 'feeds:postform' %}" method="post" enctype="multipart/form-data">
+        {% elif request.path == '/blogs/postform' %}
+        <form action="{% url 'blogs:postform' %}" method="post" enctype="multipart/form-data">
+
+        {% endif %}
+
             {% csrf_token %}
             {{form.as_div}}
             <div class="field">

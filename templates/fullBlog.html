@@ -62,14 +62,14 @@
 
 {% block main %} 
     <div class="fullBlogContainer">
-        <div class="backContainer">
+        <div class="backContainer" onclick="window.location.href='/blogs/'">
             <i class="fa-solid fa-arrow-left"></i>
             <span>Back</span>
         </div>
         <div class="headNameContainer">
-            <p>Lorem ipsum asdfa sdfsfsf asdfsf</p>
+            <p>{{blog.heading}}</p>
             <div class="nameShareContainer">
-                <p><span style="font-size: 16px; padding: 0;">Karan raj</span><span style="font-size: 14px; padding: 0;">2d ago</span></p>
+                <p><span style="font-size: 16px; padding: 0;">{{blog.postedby.username}}</span><span style="font-size: 14px; padding: 0;">2d ago</span></p>
                 <div class="socialMediaContainer">
                     <i class="fa-regular fa-heart"></i>
                     <i class="fa-solid fa-comment"></i>
@@ -79,32 +79,16 @@
             </div>
         </div>
         <div class="imageContainer">
-            <img src="/post/WIN_20220506_22_06_46_Pro.jpg" alt="">
+            <img src="/{{blog.imageContent}}" alt="">
         </div>
         <div class="contentContainer">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod pariatur repudiandae et labore id voluptates, accusantium asperiores unde magni aut. Architecto velit incidunt laboriosam debitis, id at quas dolorem consequuntur.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut debitis, neque sit corrupti fugiat natus eum perferendis fuga veritatis itaque cumque quasi quam, sint, id voluptates ipsa odio velit aspernatur?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, dolorum quia. Nulla vero mollitia nisi, ex et amet fugit, culpa, cumque labore hic eius cum incidunt repudiandae vel porro velit?</p>
+            <p>{{blog.textContent}}</p>
         </div>
         <!-- <div class="backUpvoteContainer">
             <i class="fa-solid fa-circle-chevron-left"></i>
             <i class="fa-solid fa-circle-chevron-right"></i>
         </div> -->
     </div>
-    <script type="text/javascript">
-        (function (d, t) {
-            var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-            v.onload = function () {
-                window.voiceflow.chat.load({
-                    verify: { projectID: '65ab3498a561e33f91ca3320' },
-                    url: 'https://general-runtime.voiceflow.com',
-                    versionID: 'production'
-                });
-            }
-            v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript";
-            console.log(v, d, t, s, s.parentNode)
-             s.parentNode.insertBefore(v, s);
-        })(document, 'script');
-    </script> 
+
 
 {% endblock %}

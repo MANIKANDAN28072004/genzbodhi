@@ -57,7 +57,7 @@
             <!-- <i class="fa-solid fa-globe fa-xl"></i> -->
             <a href="{% url 'blogs:blogUrl' %}" style="text-decoration: none;"><i class="fa-brands fa-blogger fa-2xl"></i></a>
             <a href="{% url 'feeds:home' %}" style="text-decoration: none;"><i class="fa-solid fa-house fa-xl" ></i></a>
-            <i class="fa-solid fa-user-group fa-xl" id="chatbot"></i>
+            <i class="fa-solid fa-user-group fa-xl"></i>
             <i class="fa-solid fa-bars fa-xl menu"></i>
 
             <!-- Assuming a variable named 'current_page' is available in your context -->
@@ -115,9 +115,7 @@
                 });
             }
             v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; 
-            v.id = 'chatbot';
-            var chatbot = document.getElementById("chatbot");
-            chatbot.parentNode.replaceChild(v, chatbot);
+            s.parentNode.insertBefore(v, s)
         })(document, 'script');
     //     document.getElementById('chatbot').addEventListener('click', function () {
     //     window.voiceflow.chat.toggle(); // You may need to adjust this function based on the chatbot library you are using
