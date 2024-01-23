@@ -21,8 +21,6 @@
 
 >#Cloning the repository
 
-`git init .`
-
 `git clone https://github.com/MANIKANDAN28072004/genzbodhi genzbodhi -b master`
 
 >#changing the directory
